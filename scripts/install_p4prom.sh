@@ -120,6 +120,7 @@ if [[ $UseSDP -eq 1 ]]; then
     # Find OSGROUP for ownership permissions - group of /p4 dir itself
     # shellcheck disable=SC2010
     OSGROUP=$(ls -al /p4/ | grep -E '\.$' | head -1 | awk '{print $4}')
+    OSUSER="$OsUser"
 
     # Load SDP controlled shell environment.
     # shellcheck disable=SC1091
