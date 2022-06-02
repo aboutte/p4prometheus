@@ -4,6 +4,8 @@
 # First version assumes SDP environment.
 #
 
+set -eux -o pipefail
+
 # shellcheck disable=SC2128
 if [[ -z "${BASH_VERSINFO}" ]] || [[ -z "${BASH_VERSINFO[0]}" ]] || [[ ${BASH_VERSINFO[0]} -lt 4 ]]; then
     echo "This script requires Bash version >= 4";
